@@ -6,9 +6,10 @@ $(document).ready(function(){
 		$(this).myvalidate('bigcapital',{'errorText':'Nazwisko musi zaczynac sie wielka litera'});
 	});
 	$('#yob').blur(function(){
-		$(this).myvalidate('isNumber');
+		$(this).myvalidate('isNumber', {'errorText' : 'Możliwe są tylko cyfry'});
 	});
 	$('#email').blur(function() {
-		$(this).myvalidate('isEmail');
+		$(this).myvalidate('isEmail', {'errorText' : 'Adres email musi zawierać znak "@" '});
+		$(this).myvalidate('required',{'errorText':'Pole adres email jest wymagane','messageBox':'bledy'});
 	});
 });
